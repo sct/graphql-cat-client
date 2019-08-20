@@ -1,0 +1,8 @@
+.cat-image {
+  display: inline-block;
+  margin: 20px;
+}
+
+.cat-image img {
+  max-width: 150px;
+}

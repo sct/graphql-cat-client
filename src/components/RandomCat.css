@@ -1,0 +1,7 @@
+.catcontainer {
+  width: 500px;
+}
+
+.catcontainer img {
+  max-width: 100%;
+}

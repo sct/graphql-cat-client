@@ -12,6 +12,7 @@
     "@types/react-dom": "16.8.5",
     "apollo-boost": "^0.4.4",
     "graphql": "^14.4.2",
+    "lodash": "^4.17.15",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1",
@@ -40,6 +41,30 @@
     ]
   },
   "devDependencies": {
-    "apollo": "^2.17.4"
+    "@types/lodash": "^4.14.137",
+    "apollo": "^2.17.4",
+    "husky": "^3.0.0",
+    "lint-staged": "^9.2.3",
+    "prettier": "^1.18.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,js}": [
+      "prettier --write",
+      "eslint",
+      "git add"
+    ],
+    "**/*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
   }
 }
